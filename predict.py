@@ -5,9 +5,6 @@ import pickle
 import glob
 import numpy as np
 
-# Dynamically add the starter code path to import features.py
-src_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "starter", "starter")
-sys.path.append(src_dir)
 from features import load_wav, extract_unified_features
 
 def main():
@@ -28,8 +25,7 @@ def main():
     model_name = "model_calibrated.pkl"
     model_paths = [
         model_name,
-        os.path.join(os.path.dirname(os.path.abspath(__file__)), model_name),
-        os.path.join(src_dir, model_name)
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), model_name)
     ]
     model_clf = None
     for p in model_paths:

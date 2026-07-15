@@ -44,7 +44,7 @@ def run_agent_simulation(pauses_by_turn, oof_preds_by_turn, threshold, delay):
 
 
 def main():
-    base_dir = "../../eot_data/eot_data"
+    base_dir = "eot_data/eot_data"
     languages = ["english", "hindi"]
     
     X, y, groups, keys, raw_rows = [], [], [], [], []
